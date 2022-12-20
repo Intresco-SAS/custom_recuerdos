@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="external_layout_document_inherit_hotel" inherit_id="l10n_co_tax_extension.external_layout_document_inherit">
+            <xpath expr="//div[@name='logo']" position="replace">
+                <div name="logo" class="col-5">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 65px;margin-top:25px" alt="Logo"/>
+                </div>
+            </xpath>
+        </template> 
+    </data>            
+</odoo>

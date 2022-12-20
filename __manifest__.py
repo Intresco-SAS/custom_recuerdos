@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "custom_modulo",
+    'name': "custom_modulo_recuerdos_hotel",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -20,13 +20,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['l10n_co_res_partner','l10n_co_e-invoice','payment_report_co'],
+    'depends': ['l10n_co_res_partner','l10n_co_e-invoice','payment_report_co','l10n_co_tax_extension'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/res_partner.xml',
-        'views/payment_report_co_inh.xml'
+        'views/payment_report_co_inh.xml',
+        'views/invoice_header_report.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
