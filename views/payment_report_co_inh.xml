@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="payment_receipt_hotel" inherit_id="payment_report_co.payment_receipt_inherit">
+            <xpath expr="//div[@t-if='o.amount']" position="after">
+                <div t-if="o.ref">
+                    <strong>REF. RESERVA: </strong><span t-esc="o.ref"/>
+                 </div>
+                 <div t-if="o.move_id.line_ids">
+                    <strong>No. HABITACIÓN.: </strong><span t-esc="o.move_id.line_ids[0].room_ref"/>
+                 </div>
+            </xpath>
+        </template> 
+    </data>            
+</odoo>

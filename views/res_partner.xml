@@ -1,0 +1,49 @@
+<odoo>
+  <record id="view_partner_form_recuerdos_0" model="ir.ui.view">
+		<field name="name">view.partner.form.0</field>
+		<field name="inherit_id" ref="base.view_partner_form" />
+		<field name="model">res.partner</field>
+		<field name="arch" type="xml"><div class="o_address_format"></div>
+      <xpath expr="//div[@class='o_address_format']/field[@name='street']" position="attributes">
+        <attribute name="required">1</attribute>
+      </xpath>
+      <xpath expr="//field[@name='website_id']" position="after">
+        <field name="email" required="1"/>
+      </xpath>
+    </field>
+  </record>
+
+  <record id="view_partner_form_recuerdos_1" model="ir.ui.view">
+		<field name="name">view.partner.form.1</field>
+		<field name="inherit_id" ref="l10n_co_res_partner.view_partner_form" />
+		<field name="model">res.partner</field>
+		<field name="arch" type="xml">
+        <xpath expr="//field[@name='country_id']" position="attributes">
+          <attribute name="required">1</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='state_id']" position="attributes">
+          <attribute name="required">1</attribute>
+        </xpath>
+
+        <xpath expr="//field[@name='xcity']" position="attributes">
+          <attribute name="required">1</attribute>
+        </xpath>
+
+    </field>
+  </record>
+      
+  <record id="view_partner_form_recuerdos_2" model="ir.ui.view">
+  <field name="name">view.partner.form.2</field>
+  <field name="inherit_id" ref="l10n_co_e-invoice.view_partner_form_fe" />
+  <field name="model">res.partner</field>
+  <field name="arch" type="xml">
+    <xpath expr="//field[@name='fiscal_responsability_ids']" position="attributes">
+      <attribute name="required">1</attribute>
+    </xpath>
+    <xpath expr="//field[@name='tribute_id']" position="attributes">
+      <attribute name="required">1</attribute>
+    </xpath>
+  </field>
+</record>
+</odoo>
