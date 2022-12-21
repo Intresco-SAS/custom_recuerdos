@@ -27,7 +27,8 @@
         # 'security/ir.model.access.csv',
         'views/res_partner.xml',
         'views/payment_report_co_inh.xml',
-        'views/invoice_header_report.xml'
+        'views/invoice_header_report.xml',
+        'views/mail_setting.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

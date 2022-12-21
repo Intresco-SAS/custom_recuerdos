@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="l10n_co_e-invoice.email_template_edi_invoice_dian" model="mail.template">
+            <field name="email_from">${object.company_id.email}</field>
+        </record>
+    </data>            
+</odoo>
